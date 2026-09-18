@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A small trolley problem simulation controlled by Jev." />
+    <title>Jev Trolley Problem</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101217'/%3E%3Cpath d='M8 24 16 7l8 17M11 18h10' fill='none' stroke='%23ffb02e' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="controls" aria-labelledby="title">
+        <h1 id="title">Jev trolley experiment</h1>
+        <p id="scenario-description">
+          Five people are on the current track. One person is on the alternate track.
+          Jev must choose whether to move the switch.
+        </p>
+
+        <button id="ask-button" type="button">Ask Jev</button>
+
+        <p aria-live="polite">
+          <span id="status">Ready</span>
+          <br />
+          <strong id="decision">No decision yet</strong>
+          <br />
+          <span id="probabilities"></span>
+        </p>
+
+        <section aria-labelledby="exchange-title">
+          <h2 id="exchange-title">Jev input and output</h2>
+          <pre><code id="jev-exchange">Run the experiment to see the Jev request and response.</code></pre>
+        </section>
+
+        <details>
+          <summary>Preview animation</summary>
+          <p>
+            <button id="preview-straight" type="button">Continue straight</button>
+            <button id="preview-switch" type="button">Switch track</button>
+          </p>
+        </details>
+      </section>
+
+      <section class="simulation" aria-label="Trolley simulation">
+        <canvas id="scene" width="960" height="600"></canvas>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

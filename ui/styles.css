@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+.controls {
+  padding: 24px;
+  border-right: 1px solid #ccc;
+}
+
+.controls h1 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.controls h2 {
+  font-size: 16px;
+}
+
+.controls pre {
+  max-height: 280px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.simulation {
+  padding: 24px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin: 4px 4px 4px 0;
+  padding: 6px 10px;
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    border-right: 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
